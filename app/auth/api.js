@@ -38,17 +38,6 @@ const changePassword = function (data) {
   })
 }
 
-// const newGame = function (data) {
-//   return $.ajax({
-//     method: 'POST',
-//     url: config.apiUrl + '/games',
-//     headers: {
-//       Authorization: 'Bearer ' + store.user.token
-//     },
-//     data
-//   })
-// }
-
 module.exports = {
   signUp,
   signIn,
