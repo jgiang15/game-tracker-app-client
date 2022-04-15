@@ -14,7 +14,8 @@ $(() => {
   $('#log-games').on('submit', vidGamesEvents.onCreateGame)
   $('#index-games').on('click', vidGamesEvents.onIndexGames)
   $('#update-game').on('submit', vidGamesEvents.onUpdateGame)
-  // $('#show-books').on('click', '.delete-book-list', vidGamesEvents.onDeleteListGame)
-
-  // $('#show-books').on('click', '.update-book-list', vidGamesEvents.onUpdateListGame)
+  $('#delete-game').on('submit', vidGamesEvents.onDeleteGame)
+  $('#show-games').on('click', '.delete-game-list', vidGamesEvents.onDeleteListGame)
+  $('#show-games').on('submit', '.update-game-list', vidGamesEvents.onUpdateListGame
+  )
 })

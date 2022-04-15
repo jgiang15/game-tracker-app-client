@@ -21,7 +21,6 @@ const onSignUp = function (event) {
 
 const onSignIn = function (event) {
   event.preventDefault()
-  console.log('i am here')
 
   // get the data from the form
   const form = event.target

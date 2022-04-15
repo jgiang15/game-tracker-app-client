@@ -39,26 +39,58 @@ const onUpdateGame = (event) => {
     .catch(() => gamesUi.onUpdateGameFailure())
 }
 
-// const onDeleteListGame = function (event) {
-//   // event.target will tell us more info about the thing that was clicked
-//   const deleteButton = event.target
-//   // we need to find id of book
-//   const gameId = $(deleteButton).data('id')
+const onDeleteGame = (event) => {
+  event.preventDefault()
 
-//   console.log(gameId)
+  const form = event.target
+  const data = getFormFields(form)
+  console.log(data)
 
-//   gamesApi.deleteBook({ gameId })
+  gamesApi
+    .deleteGame(data.id)
+    .then(() => gamesUi.onDeleteGameSuccess())
+    .catch(() => gamesUi.onDeleteGameFailure())
+}
 
-//   gamesApi
-//     .deleteBook(gameId)
-//     .then(() => gamesUi.onDeleteBookSuccess())
-//     .catch(() => gamesUi.onDeleteBookFailure())
-// }
+const onDeleteListGame = function (event) {
+  // event.target will tell us more info about the thing that was clicked
+  const deleteButton = event.target
+  // we need to find id of book
+  const gameId = $(deleteButton).data('id')
+
+  console.log(gameId)
+
+  gamesApi
+    .deleteGame(gameId)
+    .then(() => gamesUi.onDeleteGameSuccess())
+    .catch(() => gamesUi.onDeleteGameFailure())
+}
+
+const onUpdateListGame = function (event) {
+  event.preventDefault()
+  // event.target will tell us more info about the thing that was clicked
+  const updateForm = event.target
+  // we need to find id of book
+  const gameId = $(updateForm).data('id')
+  console.log(updateForm)
+
+  // use getFormFields to get the data from the form
+  const data = getFormFields(updateForm)
+  console.log(data)
+
+  console.log(gameId)
+
+  gamesApi
+    .updateGame(data, gameId)
+    .then(() => gamesUi.onUpdateGameSuccess())
+    .catch(() => gamesUi.onUpdateGameFailure())
+}
 
 module.exports = {
   onCreateGame,
   onIndexGames,
-  onUpdateGame
-
-//   onDeleteListGame
+  onUpdateGame,
+  onDeleteGame,
+  onDeleteListGame,
+  onUpdateListGame
 }
