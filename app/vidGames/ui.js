@@ -24,16 +24,17 @@ const onIndexGamesSuccess = function (response) {
   // initialize as empty
   let booksHtml = ''
 
-  // use forEach to display every book
+  // use forEach to display every game
   response.games.forEach((game) => {
-    // booksHtml += '<li>' + book.title + '</li>'
-    // booksHtml = booksHtml + '<li>' + book.title + '</li>'
+    // booksHtml += '<li>' + game.title + '</li>'
+    // booksHtml = booksHtml + '<li>' + game.title + '</li>'
 
     booksHtml += `
                       <div>
                         <h4>Title: ${game.title}</h4>
                         <p>Developer: ${game.developer}</p>
                         <p>Star Rating: ${game.rating}</p>
+                        <p>ID: ${game._id}</p>
                         <form class="update-game-list" data-id=${game._id}>
                           <input name="game[title]" type="text" placeholder="Game Title">
                           <input name="game[developer]" type="text" placeholder="Book Developer">
@@ -51,9 +52,20 @@ const onIndexGamesFailure = function () {
   $('#auth-display').text('There was an error')
 }
 
+const onUpdateGameSuccess = function () {
+  $('#show-games').html('Success. Game Updated!')
+  $('form').trigger('reset')
+}
+
+const onUpdateGameFailure = function () {
+  $('#auth-display').text('Failure while trying to update game')
+}
+
 module.exports = {
   onCreateGameSuccess,
   onCreateGameFailure,
   onIndexGamesSuccess,
-  onIndexGamesFailure
+  onIndexGamesFailure,
+  onUpdateGameSuccess,
+  onUpdateGameFailure
 }

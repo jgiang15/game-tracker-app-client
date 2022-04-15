@@ -4,7 +4,6 @@ const getFormFields = require('../../lib/get-form-fields.js')
 
 const onCreateGame = (event) => {
   event.preventDefault()
-  console.log('in events.js')
 
   const form = event.target
   const data = getFormFields(form)
@@ -16,8 +15,7 @@ const onCreateGame = (event) => {
 }
 
 const onIndexGames = () => {
-  console.log('in event listener!!!!!')
-  // get the books from the API
+  // get the games from the API
   // check the Network tab!
   gamesApi
     .indexGames()
@@ -28,7 +26,39 @@ const onIndexGames = () => {
     .catch(() => gamesUi.onIndexGamesFailure())
 }
 
+const onUpdateGame = (event) => {
+  event.preventDefault()
+
+  const form = event.target
+  const data = getFormFields(form)
+  console.log(data)
+
+  gamesApi
+    .updateGame(data, data.game.id)
+    .then(() => gamesUi.onUpdateGameSuccess())
+    .catch(() => gamesUi.onUpdateGameFailure())
+}
+
+// const onDeleteListGame = function (event) {
+//   // event.target will tell us more info about the thing that was clicked
+//   const deleteButton = event.target
+//   // we need to find id of book
+//   const gameId = $(deleteButton).data('id')
+
+//   console.log(gameId)
+
+//   gamesApi.deleteBook({ gameId })
+
+//   gamesApi
+//     .deleteBook(gameId)
+//     .then(() => gamesUi.onDeleteBookSuccess())
+//     .catch(() => gamesUi.onDeleteBookFailure())
+// }
+
 module.exports = {
   onCreateGame,
-  onIndexGames
+  onIndexGames,
+  onUpdateGame
+
+//   onDeleteListGame
 }
