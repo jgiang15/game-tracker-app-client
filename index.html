@@ -38,19 +38,22 @@
 
       <button id="sign-out-button">Sign Out</button>
 
-      <h3>Log Games</h3>
       <form id="log-games">
+        <h3>Log Games</h3>
         <input name="game[title]" type="text" placeholder="Game Title" required>
         <input name="game[developer]" type="text" placeholder="Game developer">
         <input name="game[rating]" type="text" placeholder="Game Rating">
         <button type="'submit">Log Games</button>
       </form>
+    
 
+      <div id="index-div">
       <h3>Index Games</h3>
       <button id="index-games">Get Games</button>
+      </div>
 
-      <h3>Update Game</h3>
       <form id="update-game">
+        <h3>Update Game</h3>
         <input name="game[id]" type="text" placeholder="Game ID">
         <input name="game[title]" type="text" placeholder="Game Title">
         <input name="game[developer]" type="text" placeholder="Game Developer">
@@ -58,13 +61,13 @@
         <button type="'submit">Update Game</button>
       </form>
 
-      <h3>Delete Game</h3>
       <form id="delete-game">
+        <h3>Delete Game</h3>
         <input name="id" type="text" placeholder="Game ID">
         <button type="'submit">Delete Game</button>
       </form>
 
       <section id="auth-display"></section>
-      <section id="show-games"></section>
+        <section id="show-games"></section>
     </body>
 </html>

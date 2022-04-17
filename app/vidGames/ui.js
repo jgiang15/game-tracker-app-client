@@ -8,7 +8,6 @@ const onCreateGameSuccess = function (response) {
                       </div>
                     `
   $('#show-games').html(gameHtml)
-  console.log('Game Logged')
 
   $('form').trigger('reset')
 
