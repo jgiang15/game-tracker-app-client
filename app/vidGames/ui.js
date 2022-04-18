@@ -61,7 +61,7 @@ const onUpdateGameFailure = function () {
 }
 
 const onDeleteGameSuccess = function () {
-  $('#show-games').html('Success. Book deleted!')
+  $('#show-games').html('Success. Game deleted!')
   $('form').trigger('reset')
 }
 

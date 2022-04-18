@@ -6,11 +6,12 @@ const authUi = require('./ui.js')
 
 const onSignUp = function (event) {
   event.preventDefault()
+  // console.log('i am here')
 
   // get the data from the form
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
+  // console.log(data)
 
   authApi
     .signUp(data)
@@ -24,7 +25,7 @@ const onSignIn = function (event) {
   // get the data from the form
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
+  // console.log(data)
 
   authApi
     .signIn(data)
@@ -49,7 +50,7 @@ const onChangePassword = function (event) {
   // get data from form
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
+  // console.log(data)
 
   authApi
     .changePassword(data)
