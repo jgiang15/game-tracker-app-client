@@ -76,9 +76,9 @@ const onUpdateListGame = function (event) {
 
   // use getFormFields to get the data from the form
   const data = getFormFields(updateForm)
-  console.log(data)
+  // console.log(data)
 
-  console.log(gameId)
+  // console.log(gameId)
 
   gamesApi
     .updateGame(data, gameId)

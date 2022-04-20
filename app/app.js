@@ -16,8 +16,7 @@ $(() => {
   $('#update-game').on('submit', vidGamesEvents.onUpdateGame)
   $('#delete-game').on('submit', vidGamesEvents.onDeleteGame)
   $('#show-games').on('click', '.delete-game-list', vidGamesEvents.onDeleteListGame)
-  $('#show-games').on('submit', '.update-game-list', vidGamesEvents.onUpdateListGame
-  )
+  $('#show-games').on('submit', '.update-game-list', vidGamesEvents.onUpdateListGame)
   $('#sign-out-button').hide()
   $('#change-password-form').hide()
   $('#log-games').hide()
