@@ -1,0 +1,12 @@
+@import '~bootstrap/scss/bootstrap';
+
+body {
+    background-color: orange;
+}
+
+body {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}

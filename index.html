@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Video Game Log</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+
+    <body>
+      <header>
+        <h1>Video Game Logger</h1>
+      </header>
+
+      <form id="sign-up-form">
+        <input name="credentials[email]" type="text" placeholder="Email">
+        <input name="credentials[password]" type="password" placeholder="Password">
+        <input name="credentials[password_confirmation]" type="password" placeholder="Confirm Password">
+        <button type="submit">Sign Up</button>
+      </form>
+
+      <form id="sign-in-form">
+        <input name="credentials[email]" type="text" placeholder="Email">
+        <input name="credentials[password]" type="password" placeholder="Password">
+        <button type="submit">Sign In</button>
+      </form>
+
+      <form id="change-password-form">
+        <input name="passwords[old]" type="password" placeholder="Enter old password">
+        <input name="passwords[new]" type="password" placeholder="Enter new password">
+        <button type="submit">Change Password</button>
+      </form>
+
+      <button id="sign-out-button">Sign Out</button>
+
+      <form id="log-games">
+        <h3>Log Games</h3>
+        <input name="game[title]" type="text" placeholder="Game Title" required>
+        <input name="game[developer]" type="text" placeholder="Game developer">
+        <input name="game[rating]" type="text" placeholder="Game Rating">
+        <button type="'submit">Log Games</button>
+      </form>
+    
+
+      <div id="index-div">
+      <h3>Index Games</h3>
+      <button id="index-games">Get Games</button>
+      </div>
+
+      <form id="update-game">
+        <h3>Update Game</h3>
+        <input name="game[id]" type="text" placeholder="Game ID">
+        <input name="game[title]" type="text" placeholder="Game Title">
+        <input name="game[developer]" type="text" placeholder="Game Developer">
+        <input name="game[rating]" type="text" placeholder="Game Rating">
+        <button type="'submit">Update Game</button>
+      </form>
+
+      <form id="delete-game">
+        <h3>Delete Game</h3>
+        <input name="id" type="text" placeholder="Game ID">
+        <button type="'submit">Delete Game</button>
+      </form>
+
+      <section id="auth-display"></section>
+        <section id="show-games"></section>
+    </body>
+</html>
