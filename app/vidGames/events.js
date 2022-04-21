@@ -31,7 +31,7 @@ const onUpdateGame = (event) => {
 
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
+  // console.log(data)
 
   gamesApi
     .updateGame(data, data.game.id)
@@ -44,7 +44,7 @@ const onDeleteGame = (event) => {
 
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
+  // console.log(data)
 
   gamesApi
     .deleteGame(data.id)
@@ -58,7 +58,7 @@ const onDeleteListGame = function (event) {
   // we need to find id of book
   const gameId = $(deleteButton).data('id')
 
-  console.log(gameId)
+  // console.log(gameId)
 
   gamesApi
     .deleteGame(gameId)
@@ -72,7 +72,7 @@ const onUpdateListGame = function (event) {
   const updateForm = event.target
   // we need to find id of book
   const gameId = $(updateForm).data('id')
-  console.log(updateForm)
+  // console.log(updateForm)
 
   // use getFormFields to get the data from the form
   const data = getFormFields(updateForm)

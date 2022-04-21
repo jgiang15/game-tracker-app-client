@@ -2,7 +2,7 @@ const config = require('../config')
 const store = require('../store.js')
 
 const createGame = function (data) {
-  console.log(data)
+  // console.log(data)
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/games',
@@ -25,7 +25,7 @@ const indexGames = function (data) {
 }
 
 const updateGame = function (data, id) {
-  console.log(data)
+  // console.log(data)
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + '/games/' + id,
@@ -37,7 +37,7 @@ const updateGame = function (data, id) {
 }
 
 const deleteGame = function (id) {
-  console.log(id)
+  // console.log(id)
   return $.ajax({
     method: 'DELETE',
     url: config.apiUrl + '/games/' + id,
